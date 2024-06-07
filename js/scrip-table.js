@@ -29,7 +29,7 @@ window.editarProducto = function(id) {
   db.collection("products_save").doc(id).get().then((doc) => {
     if (doc.exists) {
       // Redirigir a la página de edición y pasar los datos del registro como parámetros en la URL
-      window.location.href = `/pages/edita.html?id=${id}&nombre=${doc.data().nombre}&fechaIngreso=${doc.data().fechaIngreso}&maquinaria=${doc.data().maquinaria}&tipoMaterial=${doc.data().tipoMaterial}&tipoProducto=${doc.data().tipoProducto}&cantidadProducto=${doc.data().cantidadProducto}&area=${doc.data().area}`;
+      window.location.href = `../pages/edita.html?id=${id}&nombre=${doc.data().nombre}&fechaIngreso=${doc.data().fechaIngreso}&maquinaria=${doc.data().maquinaria}&tipoMaterial=${doc.data().tipoMaterial}&tipoProducto=${doc.data().tipoProducto}&cantidadProducto=${doc.data().cantidadProducto}&area=${doc.data().area}`;
     } else {
       console.log("No se encontró el registro a editar");
     }
