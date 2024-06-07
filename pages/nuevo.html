@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="col-12">
-                    <a href="../pages/home.html" class="btn btn-secondary">Regresar</a>
+                    <a href="/pages/home.html" class="btn btn-secondary">Regresar</a>
                     
                     <button type="button" onclick="guardarDatos()" class="btn btn-primary">Guardar</button>
                 </div>
@@ -131,7 +131,7 @@ firebase.firestore().collection("products_save").add({
               })
               .then((docRef) => {
                 console.log("Datos guardados con ID: ", docRef.id);
-                window.location.href = "/pages/home.html";
+                window.location.href = "../pages/home.html";
               })
               .catch((error) => {
                 console.error("Error al guardar los datos: ", error);
